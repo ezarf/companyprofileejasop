@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> COMPANY PROFILE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">EJASOP</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search products...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#About us">About Us</a></li>
+        </ul>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="animated-text">Discover Your Style</h1>
+            <p class="animated-text delay-1">Trendy outfits for every occasion.</p>
+            <a href="#collection" class="btn animated-btn delay-2">Shop Now</a>
+        </div>
+    </section>
+
+   <!-- Collection Section -->
+<section id="collection" class="collection">
+    <div class="container">
+        <h2>Our Collection</h2>
+        <div class="collection-items animated-menu">
+            <!-- Collection Items -->
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/564x/c6/ed/1d/c6ed1d4ee743ffe29c4f3ece830579e2.jpg" alt="T-Shirt">
+                <h3>T-Shirt</h3>
+                <p>Comfortable and stylish.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/474x/57/41/7c/57417c59fad538c9bf4a5264a493f9b1.jpg" alt="Dress">
+                <h3>Dress</h3>
+                <p>Perfect for any occasion.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/474x/d1/24/bf/d124bf69550fb931e3e5d13231f11136.jpg" alt="Jacket">
+                <h3>Jacket</h3>
+                <p>Stylish outerwear for all seasons.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/474x/ce/5b/2f/ce5b2ff815f2ca2d2842518fae91a3b2.jpg" alt="Jeans">
+                <h3>Jeans</h3>
+                <p>Classic fit for ultimate comfort.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/474x/1c/a0/d1/1ca0d1d2e8b2b2cd108e14cc28254e8c.jpg" alt="Sweater">
+                <h3>Sweater</h3>
+                <p>Cozy and warm for chilly days.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+            <div class="collection-item">
+                <img src="https://i.pinimg.com/474x/54/b2/91/54b291c718bf052399b0cdc359cb562f.jpg" alt="Shoes">
+                <h3>Shoes</h3>
+                <p>Stylish footwear for every step.</p>
+                <div class="item-actions">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn secondary-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact" style="background: url('https://source.unsplash.com/800x400/?contact') no-repeat center center/cover;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 EJAIN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Navbar hover effect */
+.nav-links a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+/* Mobile Menu Icon Animation */
+.mobile-menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-icon:hover span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-icon:hover span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-icon:hover span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+        
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #28a745;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background-color 0.3s;
+        }
+
+        .navbar.scrolled {
+            background-color: #218838;
+        }
+
+        .logo {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin-left: 20px;
+        }
+
+        .search-bar {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin: 0 20px;
+            width: 300px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 60px; /* Adjust for fixed navbar */
+            position: relative;
+        }
+
+        .animated-text {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .animated-btn {
+            animation: pulse 1s infinite alternate;
+        }
+
+        /* Collection Section */
+        .collection {
+            padding: 80px 0;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .collection-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .collection-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .collection-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .collection-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            text-align: center;
+            color: #fff; /* Change text color for visibility */
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.7); /* Add background for readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            background-color: #fff; /* Input background for contrast */
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px; /* Adjust size as needed */
+            height: 40px; /* Adjust size as needed */
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            display: block; /* Ensures no space under images */
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .secondary-btn {
+            background-color: #fff;
+            color: #28a745;
+            border: 1px solid #28a745;
+        }
+
+        .secondary-btn:hover {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #28a745;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                display: none; /* Hide mobile menu by default */
+                position: absolute;
+                background-color: #28a745;
+                top: 60px; /* Below the navbar */
+                right: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links.show {
+                display: flex; /* Show menu when toggled */
+            }
+
+            .navbar .mobile-menu-icon {
+                display: flex;
+            }
+
+            .collection-items {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .search-bar {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        /* Navbar */
+.navbar {
+    background-color: #28a745;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: #218838;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.search-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    max-width: 400px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffdd57;
+}
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-container {
+        display: none; /* Hide search on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none; /* Hide by default */
+        position: absolute;
+        top: 60px; /* Below navbar */
+        right: 0;
+        background-color: #28a745;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .mobile-menu-icon {
+        display: flex; /* Show toggle button on mobile */
+    }
+
+    .navbar .container {
+        justify-content: space-between;
+    }
+}
+
+    </style>
+
+    <script>
+        function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        // Navbar scroll and mobile toggle
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+}
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+    </script>
+</body>
+</html>
